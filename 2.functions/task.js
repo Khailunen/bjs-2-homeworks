@@ -1,13 +1,13 @@
 function getArrayParams(...arr) {
-	let min = -Infinity;
+	let min = Infinity;
 	let max = -Infinity;
 	let sum = 0;
 	for (let i = 0; i < arr.length; i++) {
 		if (arr[i] < min) {
-			max = arr[i];
+			min = arr[i];
 		}
 		if (arr[i] > max) {
-			min = arr[i];
+			max = arr[i];
 		}
 		sum += arr[i];
 	}
@@ -16,7 +16,7 @@ function getArrayParams(...arr) {
 		min: min, 
 		max: max, 
 		avg: avg
-	}
+	};
 }
 // console.log(getArrayParams(-99, 99, 10));
 // console.log(getArrayParams(1, 2, 3, -100, 10));
@@ -110,12 +110,12 @@ function makeWork(arrOfArr, func) {
 	}
 	return maxWorkerResult;
 }
-const arr = [
-	[10, 10, 11, 20, 10],
-	[67, 10, 2, 39, 88],
-	[72, 75, 51, 87, 43],
-	[30, 41, 55, 96, 62]
-];
+// const arr = [
+// 	[10, 10, 11, 20, 10],
+// 	[67, 10, 2, 39, 88],
+// 	[72, 75, 51, 87, 43],
+// 	[30, 41, 55, 96, 62]
+// ];
 // console.log(makeWork(arr, summElementsWorker)); // максимум из 61, 206, 328, 284 => 328
 // console.log(makeWork(arr, differenceMaxMinWorker)); // максимум из 10, 86, 44, 66 => 86
 // console.log(makeWork(arr, differenceEvenOddWorker)); // максимум из 39, -6, -184, 92 => 92
