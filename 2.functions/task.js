@@ -67,7 +67,7 @@ function differenceEvenOddWorker(...arr) {
 }
 
 //будет вычислять среднее значение чётных элементов
-function averageEvenElementsWorker() {
+function averageEvenElementsWorker(...arr) {
 	if (arr.length === 0)
 		return 0;
 	let sumEvenElement = 0;
