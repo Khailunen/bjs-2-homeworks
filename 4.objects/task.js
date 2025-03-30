@@ -2,11 +2,11 @@ function Student(name, gender, age) {
     this.name = name;
     this.gender = gender;
     this.age = age;
-    this.marks = new Array();
+    this.marks = [];
 }
 
 Student.prototype.setSubject = function(subjectName) {
-    this.subjectName = subjectName;
+    this.subject = subjectName;
     return ('subject: &{this.subjectName}')
 }
 
