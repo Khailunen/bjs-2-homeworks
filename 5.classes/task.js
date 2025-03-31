@@ -13,12 +13,12 @@ class PrintEditionItem {
 
 	set state(changeState) {
 		if (changeState < 0) {
-			this.state = 0;
+			this._state = 0;
 		}
 		if (changeState > 100) {
-			this.state = 100;
+			this._state = 100;
 		} else {
-			this.state = changeState;
+			this._state = changeState;
 		}
 	}
 
@@ -70,7 +70,7 @@ class Library {
 	}
 
 	addBook(book) {
-		if (this._state > 30) {
+		if (book.state > 30) {
 			this.books.push(book);
 		}
 	}
