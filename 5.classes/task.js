@@ -14,8 +14,7 @@ class PrintEditionItem {
 	set state(changeState) {
 		if (changeState < 0) {
 			this._state = 0;
-		}
-		if (changeState > 100) {
+		} else if (changeState > 100) {
 			this._state = 100;
 		} else {
 			this._state = changeState;
@@ -82,6 +81,9 @@ class Library {
 
 	giveBookByName(bookName) {
 		const searchBookByName = this.books.findIndex(book => book.name === bookName);
-		return searchBookByName !== -1 ? this.books.splice(searchBookByName, 1)[0] : null;
+        if (searchBookByName !== -1) {
+            return this.books.splice(searchBookByName, 1)[0];
+        }
+		return null;
 	}
 }
