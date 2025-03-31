@@ -47,7 +47,7 @@ describe('Домашнее задание к лекции 5 «Классы»', (
     });
     
     it('создание объекта Book', () => {
-      printItem = new Book('Меч Предназначения', 1992, 384, 'А. Сапковский');
+      printItem = new Book('Меч Предназначения', 1992, 384,'А. Сапковский');
       expect(printItem.name).toEqual('Меч Предназначения');
       expect(printItem.releaseDate).toEqual(1992);
       expect(printItem.pagesCount).toEqual(384);
@@ -62,13 +62,13 @@ describe('Домашнее задание к лекции 5 «Классы»', (
     });
     
     it('создание объекта FantasticBook', () => {
-      printItem = new FantasticBook('Властелин колец', 1954, 2093, 'Джон Толкин');
+      printItem = new FantasticBook('Властелин колец', 1954, 2093,'Джон Толкин');
       expect(printItem.author).toEqual('Джон Толкин');
       expect(printItem.type).toEqual('fantastic');
     });
     
     it('создание объекта DetectiveBook', () => {
-      printItem = new DetectiveBook('Десять негритят', 2019, 256, 'Агата Кристи');
+      printItem = new DetectiveBook('Десять негритят', 2019, 256,'Агата Кристи');
       expect(printItem.author).toEqual('Агата Кристи');
       expect(printItem.type).toEqual('detective');
     });
