@@ -7,12 +7,12 @@
     return valueParsing;
 }
 
-// function validateCount(value){
-//     try{
-//         const valueParsing = parseCount(value);
-//     } catch (error) {
-//         return error;
-//     }finally{
-//         return valueParsing;
-//     }
-// }
+function validateCount(value){
+    try{
+        const valueParsing = parseCount(value);
+    } catch (error) {
+        return error;
+    }finally{
+        return valueParsing;
+    }
+}
